@@ -187,6 +187,24 @@ button .fas {
   text-align: center;
 }
 
+.reset-button {
+  min-width: 0;
+  height: auto;
+  margin: 14px auto 0;
+  padding: 10px 16px;
+  border: 1px solid #cbd5e1;
+  background-color: #fff;
+  color: #475569;
+  font-size: 14px;
+  box-shadow: none;
+}
+
+.reset-button:hover {
+  border-color: #94a3b8;
+  background-color: #f8fafc;
+  box-shadow: none;
+}
+
 .attendance-header {
   display: flex;
   align-items: center;
@@ -253,9 +271,20 @@ button .fas {
   display: none;
 }
 
-.success-message {
+#greeting.success-message {
+  display: block;
   background-color: #e8f4fc;
   color: #003c71;
+}
+
+.celebration-message {
+  margin: 0 0 20px;
+  padding: 14px 18px;
+  border: 2px solid #f5c542;
+  border-radius: 10px;
+  background-color: #fff8dc;
+  color: #654d00;
+  font-weight: 700;
 }
 
 /* Counter */
@@ -346,6 +375,43 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.team-count {
+  color: #003c71;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.team-card.winner {
+  outline: 3px solid #f5c542;
+  box-shadow: 0 0 0 4px rgba(245, 197, 66, 0.2);
+}
+
+.attendee-list-section {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 2px solid #f1f5f9;
+  text-align: left;
+}
+
+.attendee-list-section h3 {
+  margin-bottom: 12px;
+  color: #64748b;
+  font-size: 16px;
+}
+
+#attendeeList {
+  max-height: 240px;
+  overflow-y: auto;
+  list-style: none;
+}
+
+#attendeeList li {
+  padding: 9px 12px;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+  overflow-wrap: anywhere;
 }
 
 /* Mobile responsive */

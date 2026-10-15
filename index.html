@@ -28,15 +28,26 @@
     <div class="attendance-tracker">
       <div class="attendance-header">
         <i class="fas fa-users"></i>
-        Attendance: <span id="attendeeCount">0</span>/50
+        Attendance: <span id="attendeeCount">0</span>/<span id="attendanceGoal">50</span>
       </div>
-      <div class="progress-container">
+      <div
+        class="progress-container"
+        role="progressbar"
+        aria-label="Attendance goal progress"
+        aria-valuemin="0"
+        aria-valuemax="50"
+        aria-valuenow="0"
+      >
         <div id="progressBar" class="progress-bar"></div>
       </div>
+      <button type="button" id="resetAttendanceBtn" class="reset-button">
+        <i class="fas fa-rotate-left"></i> Reset Attendance
+      </button>
     </div>
     <div class="container">
       <!-- Feedback message -->
-      <p id="greeting"></p>
+      <p id="greeting" aria-live="polite"></p>
+      <p id="celebration" class="celebration-message" aria-live="polite" hidden></p>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -81,6 +92,11 @@
           </div>
         </div>
       </div>
+
+      <section class="attendee-list-section" aria-labelledby="attendeeListHeading">
+        <h3 id="attendeeListHeading">Checked-in Attendees</h3>
+        <ul id="attendeeList" aria-live="polite"></ul>
+      </section>
     </div>
 
     <footer class="footer">
